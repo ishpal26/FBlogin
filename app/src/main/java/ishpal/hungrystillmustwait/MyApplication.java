@@ -20,10 +20,10 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        printHashKey();
         FacebookSdk.sdkInitialize(getApplicationContext());
     }
 
+    // this code is to generate the hash key required for securely linking the app to facebook
     public void printHashKey(){
         // Add code to print out the key hash
         try {
