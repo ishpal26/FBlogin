@@ -27,7 +27,7 @@ import com.facebook.login.widget.LoginButton;
 /**
  * A placeholder fragment containing a simple view.
  */
-public class FragmentSimpleLoginButton extends Fragment {
+public class FragmentLoginPage extends Fragment {
 
     private TextView mTextDetails;
     private CallbackManager mCallbackManager;
@@ -36,7 +36,7 @@ public class FragmentSimpleLoginButton extends Fragment {
     private FacebookCallback<LoginResult> mFacebookCallback = new FacebookCallback<LoginResult>() {
         @Override
         public void onSuccess(LoginResult loginResult) {
-            Log.d("ERR", "onSuccess");
+            Log.d("LOG", "onSuccess");
             AccessToken accessToken = loginResult.getAccessToken();
             Profile profile = Profile.getCurrentProfile();
             mTextDetails.setText(constructWelcomeMessage(profile));
@@ -46,17 +46,17 @@ public class FragmentSimpleLoginButton extends Fragment {
 
         @Override
         public void onCancel() {
-            Log.d("ERR", "onCancel");
+            Log.d("LOG", "onCancel");
         }
 
         @Override
         public void onError(FacebookException e) {
-            Log.d("ERR", "onError " + e);
+            Log.d("LOG", "onError " + e);
         }
     };
 
-
-    public FragmentSimpleLoginButton() {
+    //constructor
+    public FragmentLoginPage() {
     }
 
     @Override
@@ -75,7 +75,7 @@ public class FragmentSimpleLoginButton extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_simple_login_button, container, false);
+        return inflater.inflate(R.layout.fragment_login_page, container, false);
     }
 
     @Override
