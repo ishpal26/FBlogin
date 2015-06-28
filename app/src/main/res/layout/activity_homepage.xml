@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/red">
+
+    <TextView
+        android:text="HungryStillMustWait"
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:textColor="#FFFF00"
+        android:textSize="28sp"
+        android:typeface="serif"
+        android:gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/bHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="100dp"
+        android:text="Home" />
+
+    <Button
+        android:id="@+id/bNearby"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bHome"
+        android:layout_marginBottom="30dp"
+        android:text="Nearby" />
+
+    <Button
+        android:id="@+id/bSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bNearby"
+        android:layout_marginBottom="30dp"
+        android:text="Search" />
+
+    <Button
+        android:id="@+id/bLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bSearch"
+        android:layout_marginBottom="30dp"
+        android:text="Logout" />
+
+</LinearLayout>
