@@ -1,5 +1,6 @@
 package ishpal.hungrystillmustwait;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.facebook.AccessToken;
@@ -14,6 +16,7 @@ import com.facebook.AccessTokenTracker;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
 import com.facebook.Profile;
 import com.facebook.ProfileTracker;
 import com.facebook.login.LoginResult;
@@ -36,13 +39,17 @@ public class FragmentLoginPage extends Fragment {
     private FacebookCallback<LoginResult> mFacebookCallback = new FacebookCallback<LoginResult>() {
         @Override
         public void onSuccess(LoginResult loginResult) {
+            //just added
+            Intent intent = new Intent(getActivity(), MainActivity.class);
+            startActivity(intent);
+
             Log.d("LOG", "onSuccess");
             AccessToken accessToken = loginResult.getAccessToken();
             Profile profile = Profile.getCurrentProfile();
             mTextDetails.setText(constructWelcomeMessage(profile));
 
-        }
 
+        }
 
         @Override
         public void onCancel() {
@@ -62,7 +69,7 @@ public class FragmentLoginPage extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        FacebookSdk.sdkInitialize(getActivity().getApplicationContext());       // initializes fb sdk
         mCallbackManager = CallbackManager.Factory.create();
         setupTokenTracker();
         setupProfileTracker();
@@ -130,16 +137,17 @@ public class FragmentLoginPage extends Fragment {
     private void setupLoginButton(View view) {
         LoginButton mButtonLogin = (LoginButton) view.findViewById(R.id.login_button);
         mButtonLogin.setFragment(this);
-        mButtonLogin.setReadPermissions("user_friends");
+        //mButtonLogin.setReadPermissions("user_friends");
         mButtonLogin.registerCallback(mCallbackManager, mFacebookCallback);
+
     }
 
     private String constructWelcomeMessage(Profile profile) {
         StringBuffer stringBuffer = new StringBuffer();
         if (profile != null) {
-            stringBuffer.append("Welcome " + profile.getName());
+            stringBuffer.append("Hey there " + profile.getName());
+            stringBuffer.append("!");
         }
         return stringBuffer.toString();
     }
-
 }
