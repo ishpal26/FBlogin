@@ -1,5 +1,6 @@
 package ishpal.hungrystillmustwait;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -25,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
         FragmentTransaction transaction = mFragmentManager.beginTransaction();
         transaction.replace(android.R.id.content, new FragmentLoginPage(), FRAGMENT_TAG);
         transaction.commit();
-
+        
     }
 
     @Override
