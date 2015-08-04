@@ -119,7 +119,7 @@ public class FragmentLoginPage extends Fragment {
         mTokenTracker = new AccessTokenTracker() {
             @Override
             protected void onCurrentAccessTokenChanged(AccessToken oldAccessToken, AccessToken currentAccessToken) {
-                Log.d("CURR ACES TOK Changed", "" + currentAccessToken);
+                Log.d("CURR ACCESS TOK Changed", "" + currentAccessToken);
             }
         };
     }
