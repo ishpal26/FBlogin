@@ -21,7 +21,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
         android:layout_marginTop="100dp"
-        android:text="Points" />
+        android:text="Points"
+        android:background="#FFFF80" />
 
     <Button
         android:id="@+id/bNearby"
@@ -29,7 +30,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/bHome"
         android:layout_marginBottom="30dp"
-        android:text="Nearby" />
+        android:text="Nearby"
+        android:singleLine="false"
+        android:background="#FFFF4D" />
 
     <Button
         android:id="@+id/bSearch"
@@ -37,7 +40,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/bNearby"
         android:layout_marginBottom="30dp"
-        android:text="Search" />
+        android:text="Search"
+        android:background="#FFFF00" />
 
     <Button
         android:id="@+id/bLogout"
@@ -45,6 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/bSearch"
         android:layout_marginBottom="30dp"
-        android:text="Logout" />
+        android:text="Logout"
+        android:background="#CCCC00" />
 
 </LinearLayout>
