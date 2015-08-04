@@ -87,9 +87,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onResume() {
         super.onResume();
-        //just added may need to remove this, causing the app to slow down
-        //Intent intent = new Intent(this, MainActivity.class);
-        //startActivity(intent);
+
     }
 
     @Override
@@ -144,6 +142,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.bNearby:
                 break;
             case R.id.bSearch:
+                startActivity(new Intent(this, Search.class));
                 break;
             case R.id.bLogout:
                 finish();
