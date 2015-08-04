@@ -2,4 +2,11 @@
     <string name="app_name">HungryStillMustWait</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <color name="red">#8B0000</color>
+    <string name ="app_id">1474216032891867</string>
+    <color name="white">#FFFFFF</color>
+    <string name="title_activity_update_waiting_time">UpdateWaitingTime</string>
+    <string name="title_activity_search">Search</string>
+    <string name="title_activity_results_page">ResultsPage</string>
+
 </resources>
