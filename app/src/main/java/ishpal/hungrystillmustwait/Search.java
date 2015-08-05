@@ -47,7 +47,7 @@ public class Search extends AppCompatActivity implements View.OnClickListener {
             public void done(Restaurant returnedRestaurant) {
                 if (returnedRestaurant == null) {
                     AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(Search.this);
-                    dialogBuilder.setMessage("not found in database");
+                    dialogBuilder.setMessage("Not found in database");
                     dialogBuilder.setPositiveButton("ok", null);
                     dialogBuilder.show();
                 } else {
