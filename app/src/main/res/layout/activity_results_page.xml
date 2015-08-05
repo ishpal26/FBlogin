@@ -22,6 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Update Current Waiting Time(mins):"
+        android:textColor="#FFFF00"
         android:layout_alignBaseline="@+id/currentTime"
         android:layout_alignBottom="@+id/currentTime"
         android:layout_alignParentLeft="true"
@@ -45,13 +46,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Average waiting time (mins): "
-        android:layout_marginBottom="50dp"
+        android:textColor="#FFFF00"
+        android:layout_marginBottom="39dp"
         android:layout_above="@+id/textView3"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/aTime"
+        android:textColor="#FFFFFF"
         android:layout_width="40dp"
         android:layout_height="30dp"
         android:layout_alignTop="@+id/ave"
@@ -64,7 +67,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Current waiting time (mins): "
-        android:layout_marginBottom="51dp"
+        android:textColor="#FFFF00"
+        android:layout_marginBottom="47dp"
         android:layout_above="@+id/txtUsers"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -73,6 +77,7 @@
         android:id="@+id/cTime"
         android:layout_width="40dp"
         android:layout_height="30dp"
+        android:textColor="#FFFFFF"
         android:layout_below="@+id/ave"
         android:layout_toRightOf="@+id/textView3"
         android:layout_toEndOf="@+id/textView3" />
@@ -83,13 +88,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Number of user updates:"
-        android:layout_centerVertical="true"
+        android:textColor="#FFFF00"
+        android:layout_above="@+id/updateTime"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="168dp" />
 
     <TextView
         android:id="@+id/usrs"
         android:layout_width="40dp"
+        android:textColor="#FFFFFF"
         android:layout_height="30dp"
         android:layout_alignTop="@+id/txtUsers"
         android:layout_centerHorizontal="true" />
@@ -124,8 +132,9 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Address:"
+        android:textColor="#FFFF00"
         android:id="@+id/textView6"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="43dp"
         android:layout_below="@+id/usrs"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -135,21 +144,21 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Restaurant name:"
+        android:textColor="#FFFF00"
         android:id="@+id/textView7"
+        android:layout_marginTop="44dp"
         android:layout_below="@+id/textView2"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="33dp" />
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#FFFFFF"
         android:id="@+id/name"
         android:layout_alignTop="@+id/textView7"
-        android:layout_alignRight="@+id/currentTime"
-        android:layout_alignEnd="@+id/currentTime"
-        android:layout_toRightOf="@+id/textView7"
-        android:layout_toEndOf="@+id/textView7" />
+        android:layout_alignLeft="@+id/updateTime"
+        android:layout_alignStart="@+id/updateTime" />
 
 </RelativeLayout>
