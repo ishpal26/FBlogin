@@ -32,7 +32,7 @@ public class Search extends AppCompatActivity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if(v.getId() == R.id.button) {
-            Restaurant restaurant = new Restaurant(search.getText().toString());
+            Restaurant restaurant = new Restaurant(search.getText().toString().toLowerCase());
 
             authenticate(restaurant);
 
