@@ -53,7 +53,6 @@ public class ServerRequests {
     }
 
     public void updateUserDataInBackground(Restaurant restaurant, GetCallback callback) {
-        progressDialog.show();
         new UpdateDataAsyncTask(restaurant, callback).execute();
     }
 
