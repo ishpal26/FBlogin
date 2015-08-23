@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
         android:layout_marginTop="100dp"
-        android:text="Points"
+        android:text="Joke of the day"
         android:background="#FFFF80" />
 
     <Button

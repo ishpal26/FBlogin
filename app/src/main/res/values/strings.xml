@@ -8,5 +8,6 @@
     <string name="title_activity_update_waiting_time">UpdateWaitingTime</string>
     <string name="title_activity_search">Search</string>
     <string name="title_activity_results_page">ResultsPage</string>
+    <string name="title_activity_joke">Joke</string>
 
 </resources>
